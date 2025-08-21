@@ -1,7 +1,7 @@
 # Restroworks Backend
 
 This is the **PayloadCMS backend** for the Restroworks project.  
-It provides a flexible, headless CMS for managing restaurant content, users, and media, powered by MongoDB.
+It manages localization for home and contact page data, as well as user contact requests, powered by MongoDB.
 
 ---
 
@@ -17,7 +17,6 @@ It provides a flexible, headless CMS for managing restaurant content, users, and
 - **Contact Form Management:** Store and manage contact form submissions (name, email, message) via the admin panel and API
 - **Pages Collection:** Manage dynamic pages and their content for the frontend
 - **User Authentication:** Built-in user management and authentication
-- **Media Management:** Upload and manage images/files with resizing and focal point support
 - **Custom Collections:** Easily extendable for menus, orders, blogs, etc.
 - **REST API:** Auto-generated endpoints for all collections (including contact and pages)
 - **Admin Panel:** Powerful, customizable admin UI
@@ -90,11 +89,6 @@ You can use Docker for local development:
 - **Media:** Uploads-enabled collection for images and files
 ---
 
-## 🛠️ Screenshots
-![alt text](media/public/assests/screenshots/image-1.png)
-![alt text](media/public/assests/screenshots/image-2.png)
-![alt text](media/public/assests/screenshots/image-3.png)
-![alt text](media/public/assests/screenshots/image7.png)
 
 ## 🛠️ Customization
 
