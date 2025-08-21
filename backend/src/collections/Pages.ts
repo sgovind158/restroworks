@@ -39,6 +39,24 @@ const featureBlock: Block = {
   ],
 }
 
+/**
+ * Represents a "testimonial" block configuration for a CMS.
+ *
+ * @property {string} slug - The unique identifier for the block.
+ * @property {Array} fields - The fields that define the structure of the testimonial block.
+ * 
+ * Fields:
+ * - `heading`: Localized text field for the testimonial section heading. Required.
+ * - `description`: Localized textarea for the testimonial section description. Required.
+ * - `testimonialTitle`: Array of testimonial entries, each containing:
+ *    - `companyLogo`: Upload field for the company logo. Required.
+ *    - `testimonialText`: Localized textarea for the testimonial content. Required.
+ *    - `author`: Localized text field for the testimonial author. Required.
+ *    - `designation`: Localized text field for the author's designation. Optional.
+ *    - `company`: Localized text field for the company name. Optional.
+ *
+ * Used to display customer testimonials, including company logos, testimonial text, author details, and optional designation and company name.
+ */
 const testimonialBlock: Block = {
   slug: 'testimonial',
   fields: [
@@ -104,6 +122,19 @@ const ctaBlock: Block = {
   ],
 }
 
+/**
+ * Payload CMS collection configuration for "pages".
+ *
+ * This collection defines the structure and access rules for page documents,
+ * including fields for title, slug, meta information, and content blocks.
+ *
+ * @remarks
+ * - Public read access is enabled.
+ * - Supports localization for title, metaTitle, and metaDescription.
+ * - Content is composed of modular blocks: heroBlock, featureBlock, testimonialBlock, and ctaBlock.
+ *
+ * @see CollectionConfig
+ */
 export const Pages: CollectionConfig = {
   slug: 'pages',
   access: {

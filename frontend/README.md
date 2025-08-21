@@ -1,36 +1,140 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Restroworks Frontend
 
-## Getting Started
+This is the **Next.js frontend** for the Restroworks project, a modern restaurant management SaaS platform.  
+It supports localization (English/Hindi), dynamic content from PayloadCMS, SEO best practices, and more.
 
-First, run the development server:
+## 🖥️ Technology Stack
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+| Category         | Packages / Tools Used                                                                 |
+|------------------|--------------------------------------------------------------------------------------|
+| **Framework**        | Next.js (v15+), React (v19+), TypeScript                                      |
+| **UI/Styling**       | Tailwind CSS, shadcn/ui, lucide-react
+| **Forms/Validation** | Formik, Yup                                                                   |
+| **Utilities**        | axios, react-toastify, motion, clsx, class-variance-authority, tailwind-merge  |
+| **Env/Build**        | env-cmd, next-sitemap                                                         |
+| **Backend**          | PayloadCMS (local), MongoDB                                                   |
+
+---
+
+
+---
+
+## 🚀 Features
+
+- **Next.js App Router** (v15+)
+- **Localization (i18n)**: English (`en`), Hindi (`hi`)
+- **Dynamic Content**: Fetches pages and blocks from PayloadCMS backend
+- **SEO Optimized**: Dynamic metadata, sitemap, robots.txt
+- **Custom 404, Loading, and Error pages**
+- **Contact Form**: Integrated with backend API using Formik for form state management and Yup for validation.
+- **Image Optimization**: Uses Next.js `<Image />`
+- **Tailwind CSS** for styling
+- **shadcn/ui** for modern, accessible UI components
+
+---
+
+
+## 🏗️ Project Structure
+
+```
+frontend/
+├── .next/                  # Next.js build output (auto-generated)
+├── node_modules/           # Node.js dependencies
+├── public/                 # Static assets (images, favicon, etc.)
+├── src/
+│   ├── app/
+│   │   ├── [locale]/       # Locale-based routing (en, hi, etc.)
+│   │   │   ├── contact/    # Contact page (localized)
+│   │   │   ├── lang/       # Language switcher or locale utilities
+│   │   │   ├── error.tsx   # Custom error page
+│   │   │   ├── layout.tsx  # Layout for locale pages
+│   │   │   ├── loading.tsx # Loading state for locale pages
+│   │   │   └── page.tsx    # Home page (localized)
+│   │   ├── favicon.ico
+│   │   ├── global-not-found.tsx # Global 404 page
+│   │   └── globals.css     # Global styles (Tailwind, etc.)
+│   ├── components/         # Shared shadcn ui components
+│   ├── lib/                # Library code and helpers
+│   ├── utils/              # Utility functions
+│   └── views/              # UI blocks and view components
+│       └── middleware.ts   # Middleware for Next.js (e.g., i18n)
+├── .env                    # Environment variables
+├── .env.dev
+├── .env.local
+├── .gitignore
+├── components.json         # shadcn/ui config
+├── eslint.config.mjs       # ESLint configuration
+└── README.md               # Project documentation
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+---
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## 🛠️ Getting Started
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
 
-## Learn More
+1. **Clone the repository:**
+   ```sh
+   git clone https://github.com/sgovind158/restroworks.git
+   cd restroworks/frontend
+   ```
 
-To learn more about Next.js, take a look at the following resources:
+2. **Install dependencies:**
+   ```sh
+   npm install
+   ```
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+3. **Set up environment variables:**
+   ⚠️ **Note:** Normally, we do **not** commit `.env` files to version control for security reasons. 
+   For your convenience and easy installation, `.env`, `.env.dev`, and `.env.local` files are included in the repository. 
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+3. **Run the development server:**
+   ```sh
+   npm run dev
+   ```
 
-## Deploy on Vercel
+4. **Build for production:**
+   ```sh
+   npm run build
+   npm start
+   ```
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+---
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+## 🌐 Localization
+
+- All pages are available in English (`en`) and Hindi (`hi`).
+- Locale is determined by the URL (e.g., `/en`, `/hi`).
+
+---
+
+## 📸 Screenshots
+![Hero Section](image-1.png)
+
+![Tab View](image-2.png)
+
+![Mobile View](image-3.png)
+
+![Feature Section](image-4.png)
+
+![Contact Us](image-6.png)
+
+![Footer](image-5.png)
+
+## 📝 Notes
+
+- Content is managed via [PayloadCMS](https://payloadcms.com/).
+- Uses [shadcn/ui](https://ui.shadcn.com/) for UI components.
+
+---
+
+## 📂 Related
+
+- [Restroworks Backend (PayloadCMS)](../backend)
+- [PayloadCMS Documentation](https://payloadcms.com/docs)
+
+---
+
+
+## 📄 License
+
+MIT
