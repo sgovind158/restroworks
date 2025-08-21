@@ -45,7 +45,7 @@ frontend/
 │   ├── app/
 │   │   ├── [locale]/       # Locale-based routing (en, hi, etc.)
 │   │   │   ├── contact/    # Contact page (localized)
-│   │   │   ├── lang/       # Language switcher or locale utilities
+│   │   │   ├── lang/       # Language local static file
 │   │   │   ├── error.tsx   # Custom error page
 │   │   │   ├── layout.tsx  # Layout for locale pages
 │   │   │   ├── loading.tsx # Loading state for locale pages
@@ -108,17 +108,17 @@ frontend/
 ---
 
 ## 📸 Screenshots
-![Hero Section](image-1.png)
+![Hero Section](public/assets/screenshot/image-1.png)
 
-![Tab View](image-2.png)
+![Tab View](public/assets/screenshot/image-2.png)
 
-![Mobile View](image-3.png)
+![Mobile View](public/assets/screenshot/image-3.png)
 
-![Feature Section](image-4.png)
+![Feature Section](public/assets/screenshot/image-4.png)
 
-![Contact Us](image-6.png)
+![Contact Us](public/assets/screenshot/image-6.png)
 
-![Footer](image-5.png)
+![Footer](public/assets/screenshot/image-5.png)
 
 ## 📝 Notes
 
