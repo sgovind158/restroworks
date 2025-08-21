@@ -98,6 +98,10 @@ You can use Docker for local development:
 
 ---
 
+## 📹 Video Walkthrough
+
+> Click the [watch the video here](https://youtu.be/MLgRtuFnhug).
+
 ## ❓ Questions & Support
 
 - [PayloadCMS Discord](https://discord.com/invite/payload)

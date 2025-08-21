@@ -165,9 +165,8 @@ restroworks/
 
 ## 📹 Video Walkthrough
 
-[![Watch the walkthrough](https://youtu.be/MLgRtuFnhug)](https://youtu.be/MLgRtuFnhug)
+> Click the [watch the video here](https://youtu.be/MLgRtuFnhug).
 
-> Click the image above or [watch the video here](https://youtu.be/MLgRtuFnhug).
 
 
 ## 🛠️ Customization

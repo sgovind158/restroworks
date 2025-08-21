@@ -105,7 +105,13 @@ frontend/
 - All pages are available in English (`en`) and Hindi (`hi`).
 - Locale is determined by the URL (e.g., `/en`, `/hi`).
 
+
+
 ---
+
+## 📹 Video Walkthrough
+
+> Click the [watch the video here](https://youtu.be/MLgRtuFnhug).
 
 ## 📸 Screenshots
 ![Hero Section](public/assets/screenshot/image-1.png)
@@ -119,6 +125,7 @@ frontend/
 ![Contact Us](public/assets/screenshot/image-6.png)
 
 ![Footer](public/assets/screenshot/image-5.png
+
 
 ## 📝 Notes
 
