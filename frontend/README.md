@@ -118,7 +118,7 @@ frontend/
 
 ![Contact Us](public/assets/screenshot/image-6.png)
 
-![Footer](public/assets/screenshot/image-5.png)
+![Footer](public/assets/screenshot/image-5.png
 
 ## 📝 Notes
 

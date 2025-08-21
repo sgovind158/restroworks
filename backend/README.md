@@ -1,67 +1,116 @@
-# Payload Blank Template
+# Restroworks Backend
 
-This template comes configured with the bare minimum to get started on anything you need.
+This is the **PayloadCMS backend** for the Restroworks project.  
+It provides a flexible, headless CMS for managing restaurant content, users, and media, powered by MongoDB.
 
-## Quick start
+---
 
-This template can be deployed directly from our Cloud hosting and it will setup MongoDB and cloud S3 object storage for media.
+## 🖥️ Technology Stack
 
-## Quick Start - local setup
+- **Backend:** [PayloadCMS](https://payloadcms.com/) (Node.js)
+- **Database:** MongoDB
 
-To spin up this template locally, follow these steps:
+---
 
-### Clone
+## 🚀 Features
 
-After you click the `Deploy` button above, you'll want to have standalone copy of this repo on your machine. If you've already cloned this repo, skip to [Development](#development).
+- **Contact Form Management:** Store and manage contact form submissions (name, email, message) via the admin panel and API
+- **Pages Collection:** Manage dynamic pages and their content for the frontend
+- **User Authentication:** Built-in user management and authentication
+- **Media Management:** Upload and manage images/files with resizing and focal point support
+- **Custom Collections:** Easily extendable for menus, orders, blogs, etc.
+- **REST API:** Auto-generated endpoints for all collections (including contact and pages)
+- **Admin Panel:** Powerful, customizable admin UI
+- **Localization Ready:** Can be extended for multi-language content
 
-### Development
+---
 
-1. First [clone the repo](#clone) if you have not done so already
-2. `cd my-project && cp .env.example .env` to copy the example environment variables. You'll need to add the `MONGODB_URI` from your Cloud project to your `.env` if you want to use S3 storage and the MongoDB database that was created for you.
+## ⚡ Quick Start
 
-3. `pnpm install && pnpm dev` to install dependencies and start the dev server
-4. open `http://localhost:3000` to open the app in your browser
+### 1. Clone the Repository
 
-That's it! Changes made in `./src` will be reflected in your app. Follow the on-screen instructions to login and create your first admin user. Then check out [Production](#production) once you're ready to build and serve your app, and [Deployment](#deployment) when you're ready to go live.
+```sh
+git clone https://github.com/sgovind158/restroworks.git
+cd restroworks/backend
+```
 
-#### Docker (Optional)
+### 2. Set Up Environment Variables
 
-If you prefer to use Docker for local development instead of a local MongoDB instance, the provided docker-compose.yml file can be used.
+Copy the example environment file and update values as needed:
 
-To do so, follow these steps:
+```sh
+cp .env.example .env
+```
 
-- Modify the `MONGODB_URI` in your `.env` file to `mongodb://127.0.0.1/<dbname>`
-- Modify the `docker-compose.yml` file's `MONGODB_URI` to match the above `<dbname>`
-- Run `docker-compose up` to start the database, optionally pass `-d` to run in the background.
+- Set your `MONGODB_URI` (local or cloud MongoDB connection string)
+- Configure S3 credentials if using cloud media storage
 
-## How it works
+### 3. Install Dependencies
 
-The Payload config is tailored specifically to the needs of most websites. It is pre-configured in the following ways:
+```sh
+pnpm install
+```
+or
+```sh
+npm install
+```
 
-### Collections
+### 4. Start the Development Server
 
-See the [Collections](https://payloadcms.com/docs/configuration/collections) docs for details on how to extend this functionality.
+```sh
+pnpm dev
+```
+or
+```sh
+npm run dev
+```
 
-- #### Users (Authentication)
+Open [http://localhost:3000](http://localhost:3000) to access the Payload admin panel.
 
-  Users are auth-enabled collections that have access to the admin panel.
+---
 
-  For additional help, see the official [Auth Example](https://github.com/payloadcms/payload/tree/main/examples/auth) or the [Authentication](https://payloadcms.com/docs/authentication/overview#authentication-overview) docs.
+## 🐳 Docker (Optional)
 
-- #### Media
+You can use Docker for local development:
 
-  This is the uploads enabled collection. It features pre-configured sizes, focal point and manual resizing to help you manage your pictures.
+1. Update `MONGODB_URI` in your `.env` to `mongodb://127.0.0.1/<dbname>`
+2. Update `docker-compose.yml` if needed
+3. Start with:
+   ```sh
+   docker-compose up
+   ```
 
-### Docker
+---
 
-Alternatively, you can use [Docker](https://www.docker.com) to spin up this template locally. To do so, follow these steps:
+## 🏗️ Collections
 
-1. Follow [steps 1 and 2 from above](#development), the docker-compose file will automatically use the `.env` file in your project root
-1. Next run `docker-compose up`
-1. Follow [steps 4 and 5 from above](#development) to login and create your first admin user
+- **Contact:** Stores contact form submissions (name, email, message)
+- **Pages:** Manages dynamic pages and their content for the frontend
+- **Users:** Auth-enabled collection for admin panel access
+- **Media:** Uploads-enabled collection for images and files
+---
 
-That's it! The Docker instance will help you get up and running quickly while also standardizing the development environment across your teams.
+## 🛠️ Screenshots
+![alt text](media/public/assests/screenshots/image-1.png)
+![alt text](media/public/assests/screenshots/image-2.png)
+![alt text](media/public/assests/screenshots/image-3.png)
+![alt text](media/public/assests/screenshots/image7.png)
 
-## Questions
+## 🛠️ Customization
 
-If you have any issues or questions, reach out to us on [Discord](https://discord.com/invite/payload) or start a [GitHub discussion](https://github.com/payloadcms/payload/discussions).
+- Extend collections in `/src/collections`
+- Update Payload config in `/src/payload.config.ts`
+- See [PayloadCMS Docs](https://payloadcms.com/docs) for more
+
+---
+
+## ❓ Questions & Support
+
+- [PayloadCMS Discord](https://discord.com/invite/payload)
+- [PayloadCMS Discussions](https://github.com/payloadcms/payload/discussions)
+
+---
+
+## 📄 License
+
+MIT
