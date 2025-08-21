@@ -111,7 +111,7 @@ frontend/
 
 ## 📹 Video Walkthrough
 
-> Click the [watch the video here](https://youtu.be/MLgRtuFnhug).
+> Click here to [watch the video here](https://youtu.be/MLgRtuFnhug).
 
 ## 📸 Screenshots
 ![Hero Section](public/assets/screenshot/image-1.png)
