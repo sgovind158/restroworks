@@ -168,8 +168,8 @@ export interface Page {
   id: string;
   title: string;
   slug: string;
-  metaTitle?: string | null;
-  metaDescription?: string | null;
+  metaTitle: string;
+  metaDescription: string;
   content?:
     | (
         | {
@@ -181,10 +181,12 @@ export interface Page {
             blockType: 'hero';
           }
         | {
+            heading: string;
+            description: string;
             features?:
               | {
                   title: string;
-                  description?: string | null;
+                  description: string;
                   id?: string | null;
                 }[]
               | null;
@@ -193,11 +195,15 @@ export interface Page {
             blockType: 'feature';
           }
         | {
+            heading: string;
+            description: string;
             testimonialTitle?:
               | {
-                  quote: string;
-                  author?: string | null;
-                  avatar?: (string | null) | Media;
+                  companyLogo: string | Media;
+                  testimonialText: string;
+                  author: string;
+                  designation?: string | null;
+                  company?: string | null;
                   id?: string | null;
                 }[]
               | null;
@@ -207,7 +213,7 @@ export interface Page {
           }
         | {
             ctaText: string;
-            ctaLink?: string | null;
+            ctaLink: string;
             id?: string | null;
             blockName?: string | null;
             blockType: 'cta';
@@ -358,6 +364,8 @@ export interface PagesSelect<T extends boolean = true> {
         feature?:
           | T
           | {
+              heading?: T;
+              description?: T;
               features?:
                 | T
                 | {
@@ -371,12 +379,16 @@ export interface PagesSelect<T extends boolean = true> {
         testimonial?:
           | T
           | {
+              heading?: T;
+              description?: T;
               testimonialTitle?:
                 | T
                 | {
-                    quote?: T;
+                    companyLogo?: T;
+                    testimonialText?: T;
                     author?: T;
-                    avatar?: T;
+                    designation?: T;
+                    company?: T;
                     id?: T;
                   };
               id?: T;

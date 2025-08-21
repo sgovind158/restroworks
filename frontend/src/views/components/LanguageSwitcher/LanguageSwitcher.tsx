@@ -9,8 +9,16 @@ import { ChevronDown, Globe } from "lucide-react";
 import { usePathname, useRouter } from "next/navigation";
 import { locales } from "./data";
 
-
-
+/**
+ * A language switcher component that allows users to change the application's locale.
+ *
+ * @param currentLocale - The currently active locale code.
+ *
+ * This component displays a dropdown menu with available locales. When a user selects a different locale,
+ * the URL is updated to reflect the new locale, and navigation occurs accordingly.
+ *
+ * The currently selected locale is highlighted and disabled in the dropdown.
+ */
 export default function LanguageSwitcher({
   currentLocale,
 }: {

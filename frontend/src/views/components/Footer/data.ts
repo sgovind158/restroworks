@@ -28,6 +28,12 @@ export const socialLinks = [
 ];
 
 export const footerLinks = [
-  { href: "https://www.restroworks.com/website-terms-of-use/", label: "Terms and conditions" },
-  { href: "https://www.restroworks.com/privacy-policy/", label: "Privacy Policy" },
+  {
+    href: "https://www.restroworks.com/website-terms-of-use/",
+    label: "Terms and conditions",
+  },
+  {
+    href: "https://www.restroworks.com/privacy-policy/",
+    label: "Privacy Policy",
+  },
 ];

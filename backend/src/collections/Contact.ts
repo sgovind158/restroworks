@@ -4,6 +4,7 @@ export const Contact: CollectionConfig = {
   slug: 'contact',
   access: {
     read: () => true, // Allow public read (for testing only)
+    create: () => true
   },
   fields: [
     { name: 'name', type: 'text', required: true },

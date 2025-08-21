@@ -45,6 +45,20 @@ const postMethod = async (
 };
 
 //get method function to use call get method
+/**
+ * Sends a GET request to the specified endpoint with optional query parameters.
+ *
+ * @param endpoint - The URL endpoint to send the GET request to.
+ * @param params - An optional object containing query parameters to include in the request.
+ * @returns A Promise that resolves with the response data or rejects with an error object.
+ *
+ * @example
+ * ```typescript
+ * getMethod('/api/users', { id: 1 })
+ *   .then(data => console.log(data))
+ *   .catch(error => console.error(error));
+ * ```
+ */
 const getMethod = async (
   endpoint: string,
   params: Record<string, unknown> = {}

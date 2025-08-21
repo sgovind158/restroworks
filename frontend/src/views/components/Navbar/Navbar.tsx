@@ -4,8 +4,22 @@ import LanguageSwitcher from "../LanguageSwitcher/LanguageSwitcher";
 import Link from "next/link";
 import HamburgerBtn from "../Button/HamburgerBtn";
 import { navLinks } from "./data";
-import Image from "next/image";
 import { motion } from "framer-motion";
+import LogoIcon from "../svg/LogoIcon";
+
+/**
+ * Navbar component renders the top navigation bar with branding, navigation links, 
+ * a hamburger menu for mobile responsiveness, and a language switcher.
+ *
+ * @param locale - The current locale string used for routing and language selection.
+ *
+ * @returns The navigation bar JSX element.
+ *
+ * @remarks
+ * - Uses motion animation for the logo.
+ * - Responsive design: displays a hamburger menu on mobile and horizontal links on desktop.
+ * - Closes the menu when a navigation link is clicked.
+ */
 const Navbar = ({ locale }: { locale: string }) => {
   const [open, setOpen] = useState(false);
 
@@ -24,15 +38,9 @@ const Navbar = ({ locale }: { locale: string }) => {
             initial={{ opacity: 0, x: -40 }}
             animate={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.8, ease: "easeOut" }}
+            className="flex items-center gap-2"
           >
-            <Image
-              src="/assests/navbar/restroworks-logo.webp"
-              alt="Logo"
-              width={200}
-              height={53}
-              className=""
-              priority
-            />
+            <LogoIcon /> <span className="">Restroworks</span>
           </motion.div>
         </Link>
         {/* Hamburger */}
